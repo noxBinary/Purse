@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURSE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-handbag"></i>
+                    Purse
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/noxBinary/Purse">Github</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-fluid p-5">
+            <div class="row py-4">
+                <div class="col-lg-7 p-2">
+                    <h1 class="display-5 fw-bold">Your <span class="text-warning">Simple</span> & <span
+                            class="text-primary">Fast</span> Calculating Companion.</h1>
+                    <p class="lead fs-5 pe-5">This is an omni-purpose calculator, from home budget to dividends calculation,
+                        <span class="fst-italic">everything</span>.
+                    </p>
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+        </div>
+
+        <section id="calculator" class="bg-dark text-light py-5">
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <i class="bi bi-table display-3 mb-3"></i>
+                <div class="container main-calc p-4 rounded bg-secondary">
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-8">
+                            <input type="number" id="incomeInput" class="form-control"
+                                placeholder="Enter your total income">
+                        </div>
+                        <div class="col-md-4">
+                            <button id="setIncomeBtn" type="button" class="btn btn-success w-100">Set Income</button>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-5">
+                            <input type="text" id="nameInput" class="form-control" placeholder="Name (e.g., Rent)">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="number" id="amountInput" class="form-control" placeholder="Amount">
+                        </div>
+                        <div class="col-md-2">
+                            <button id="addBtn" type="button" class="btn btn-warning w-100">Add</button>
+                        </div>
+                    </div>
+
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="entryList">
+                        </tbody>
+                    </table>
+
+                    <div class="row text-center mb-4">
+                        <div class="col-md-4">
+                            <div class="card border-success">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success">Total Income</h5>
+                                    <h3 id="totalIncomeDisplay">0.00</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-danger">
+                                <div class="card-body">
+                                    <h5 class="card-title text-danger">Total Expenses</h5>
+                                    <h3 id="totalExpensesDisplay">0.00</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-primary">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">Remaining</h5>
+                                    <h3 id="remainingBalanceDisplay">0.00</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/assets/js/index.js"></script>
+
+</body>
+
+</html>
